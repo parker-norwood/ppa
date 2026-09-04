@@ -7,15 +7,14 @@ PPA (Personal Package Archives) Repository for Ubuntu.
 ### Install
 
 ```sh
-wget -qO - https://ppa.parker.dev/ppa.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/ppa.gpg 1> /dev/null
-sudo wget -P /etc/apt/sources.list.d/ https://ppa.parker.dev/ppa.list
+sudo wget -O /etc/apt/sources.list.d/ppa.sources https://ppa.parker.dev/ppa.sources
 sudo apt update
 ```
 
 ### Uninstall
 
 ```sh
-sudo rm -rf /etc/apt/sources.list.d/ppa.list /etc/apt/trusted.gpg.d/ppa.gpg /var/lib/apt/lists/
+sudo rm -f /etc/apt/sources.list.d/ppa.sources
 sudo apt update
 ```
 
